@@ -1,0 +1,5 @@
+ {
+	"name": "Backbone Guru edition",
+	"id": "2",
+	"narration": "Angular uses this approach because it allows for a clear separation of concerns and for a higher degree of focused unit-testing. You can for example configure the DI framework to use mock-objects for underlying components instead of real services during your unit tests. This approach allows you to focus on testing only one particular piece of functionality - one unit - instead of testing all the underlying services as well. You can read more about Angular's ideas around testing at Unit Testing withing AngularJS Applications (Please note: this chapter has not yet been released)"
+}

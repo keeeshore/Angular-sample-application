@@ -1,0 +1,5 @@
+ {
+	"id": "1",
+	"name": "Angular Professional Edition",
+	"narration": "controller(name) - retrieves the controller of the current element or its parent. By default retrieves controller associated with the ngController directive. If name is provided as camelCase directive name, then the controller for this directive will be retrieved (e.g. 'ngModel').injector() - retrieves the injector of the current element or its parent.scope() - retrieves the scope of the current element or its parent. Requires Debug Data to be enabled.isolateScope() - retrieves an isolate scope if one is attached directly to the current element. This getter should be used only on elements that contain a directive which starts a new isolate scope. Calling scope() on this element always returns the original non-isolate scope. Requires Debug Data to be enabled.inheritedData() - same as data(), but walks up the DOM until a value is found or the top parent element is reached."
+}

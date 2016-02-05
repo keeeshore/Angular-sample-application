@@ -1,0 +1,51 @@
+ <div ng-controller="TodoListController" class="bordered">
+		<h4>{{name}}</h4>
+		<div class="col-sm-12">
+			Search: <input type="text" ng-model="query" value="">			
+		</div>
+		<div class="col-sm-4">
+			<h3>Things to do </h3>
+			<hr>
+			<ul>
+				<li ng-repeat="todo in todoModel | filter:query" class="{{todo.removed ? 'hidden' : 'active' }}">
+					<input type="checkbox" ng-model="todo.done" ng-click="isDone($index, todo)">
+					<span class="done-{{todo.done}}">{{todo.text | test}}</span>
+					<input type="button" ng-click="removeTodo($index, todo)" value="Remove">
+				</li>
+			</ul>
+		</div>
+		<div class="col-sm-4">
+			<h3>Things done </h3>
+			<hr>
+			<ul>
+				<li ng-repeat="todo in todoModel" class="{{todo.done ? 'active' : 'hidden' }}">
+					<span>{{todo.text}}</span>
+				</li>
+			</ul>
+		</div>	
+		<div class="col-sm-4">
+			<h3>Things removed </h3>
+			<hr>
+			<ul>
+				<li ng-repeat="todo in todoModel" class="{{todo.removed ? 'active' : 'hidden' }}">
+					<span>{{todo.text}}</span>
+					<input type="button" ng-click="undoTodo($index, todo)" value="Undo">
+				</li>
+			</ul>
+		</div>
+		
+		<div class="col-sm-12" ng-controller="ChildController">
+			<h4>{{name}}</h4>
+			
+			<div my-customer></div>
+		
+		</div>
+		
+		<div class="col-sm-12">
+			<hr>
+			<form ng-submit="addTodo()">
+				<input type="text" ng-model="newTodo">
+				<input type="submit" value="add">
+			</form>
+		</div>
+	</div>
