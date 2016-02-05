@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app='mainApp'>
+	<head>	
+		
+		<script src="lib/angular.js"></script>
+		<script src="lib/angular-route.js"></script>
+		<script src="lib/jquery-1.10.2.min.js" type="text/javascript"></script>
+		
+		<script src="mainApp.js"></script>
+		<script src="modules/TodoListController.js"></script>
+		<script src="modules/ChildController.js"></script>
+		<script src="modules/BookListController.js"></script>
+		<script src="modules/BookDetailController.js"></script>
+		<script src="modules/dialogBoxApp.js"></script>
+		<script src="filters/testFilter.js"></script>
+		<script src="directives/testDirective.js"></script>
+   
+		<style type="text/css">
+			.bordered { border: 1px solid #cc0000; overflow: auto;}
+		</style>
+	
+		<link href="bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet">
+		<script src="bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+	</head>
+	<body>  
+	
+	<div class="container bordered">
+		<ul class="list-inline">
+			<li><a href="#/">Home</a></li>
+			<li><a href="#/books">Books</a></li>
+		</ul>		
+		<div ng-view class="col-sm-12"></div>
+	</div>    
+	
+	
+    </div>
+	
+  </body>
+   
+</html>
